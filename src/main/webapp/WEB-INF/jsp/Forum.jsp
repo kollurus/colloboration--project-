@@ -30,26 +30,31 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>Forum ID</th>
+					<!--  <th>Forum ID</th> -->
 					<th>Forum Name</th>
 					<th>Forum Description</th>
-					<sec:authorize access="isAuthenticated()">   
+				<!--  	<sec:authorize access="isAuthenticated()">   
 						<th>Delete Forum</th>
 						<th>Edit Forum</th>
-					</sec:authorize>
+					</sec:authorize> -->
 				</tr>
 			</thead>
 			<tbody>
 				<tr data-ng-repeat="forum in forums">
-					<td>{{forum.fid}}</td>
-					<td>{{forum.forumName}}</td>
-					<td>{{forum.forumDesc}}</td>
+					<!--  <td>{{forum.fid}}</td> -->
+					<td width="15%">{{forum.forumName}}</td>
+					<td width="70%">{{forum.forumDesc}}</td>
+					<td width="15%">
+						<div class="btn-group  btn-group-justified ">
 					<sec:authorize access="isAuthenticated()">
 						<td><button data-ng-click="deleteForum(forum.fid)"
 								class="btn btn-xs btn-danger">Delete</button></td>
 						<td><button data-ng-click="editForum(forum.fid)"
 								class="btn btn-xs btn-info">Edit</button></td>
 					</sec:authorize>
+					<a href="forum/{{forum.fid}}" class="btn btn-primary btn-xs">View</a>
+						</div>
+					</td>
 				</tr>
 			</tbody>
 		</table>

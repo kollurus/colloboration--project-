@@ -47,5 +47,12 @@ public class ForumDAOImpl implements ForumDAO {
 		Forum forum=(Forum) c.uniqueResult();
 		return forum;
 	}
+	@Transactional
+	public List<Forum> getIndividualForum(int forumid) {
+		Criteria c=sessionFactory.getCurrentSession().createCriteria(Forum.class);
+		c.add(Restrictions.eq("fid", forumid));
+		List<Forum> list=c.list();
+		return list;
+	}
 
 }

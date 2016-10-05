@@ -49,4 +49,9 @@ public class ForumServiceImpl implements ForumService{
 	{
 		 return forumDAO.getForum(forumid);
 	}
+	/*Retrive Single Forum List */
+	public List<Forum> getSingleForum(int forumid) 
+	{
+		return forumDAO.getIndividualForum(forumid);
+	}
 }

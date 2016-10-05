@@ -1,5 +1,7 @@
 package com.niit.models;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,7 +17,7 @@ public class ForumComments {
 	private int c_userid;
 	private int c_fid;
 	private String commentDesc;
-	private String commenttime;
+	private Date commenttime;
 	public int getCid() {
 		return cid;
 	}
@@ -40,10 +42,10 @@ public class ForumComments {
 	public void setCommentDesc(String commentDesc) {
 		this.commentDesc = commentDesc;
 	}
-	public String getCommenttime() {
+	public Date getCommenttime() {
 		return commenttime;
 	}
-	public void setCommenttime(String commenttime) {
+	public void setCommenttime(Date commenttime) {
 		this.commenttime = commenttime;
 	} 
 	

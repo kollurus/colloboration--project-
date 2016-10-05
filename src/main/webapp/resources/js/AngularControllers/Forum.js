@@ -32,6 +32,16 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 			alert("Error");
 		});
 	};
+	$scope.getSingleForum = function() {
+		$http({
+			method : 'GET',
+			url : 'Forum'
+		}).success(function(data, status, headers, config) {
+			$scope.forums = data;// alert(data); 
+		}).error(function(data, status, headers, config) {
+			alert("Error");
+		});
+	};
 	
 	
 	$scope.deleteForum = function(fid) {

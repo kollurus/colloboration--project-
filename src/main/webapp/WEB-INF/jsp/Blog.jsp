@@ -40,15 +40,20 @@
 			</thead>
 			<tbody>
 				<tr data-ng-repeat="blog in blogs">
-					<td>{{blog.bid}}</td>
-					<td>{{blog.blogName}}</td>
-					<td>{{blog.blogDesc}}</td>
+					<!--  <td>{{blog.bid}}</td> -->
+					<td width="15%">{{blog.blogName}}</td>
+					<td width="70%">{{blog.blogDesc}}</td>
+					<td width="15%">
+						<div class="btn-group  btn-group-justified ">
 					<sec:authorize access="isAuthenticated()">
 						<td><button data-ng-click="deleteBlog(blog.bid)"
 								class="btn btn-xs  btn-block btn-info">Delete</button></td>
 						<td><button data-ng-click="editBlog(blog.bid)"
 								class="btn btn-xs  btn-block btn-info">Edit</button></td>
 					</sec:authorize>
+					<a href="blog/{{blog.bid}}" class="btn btn-primary btn-xs">View</a>
+						</div>
+					</td>
 				</tr>
 			</tbody>
 		</table>
