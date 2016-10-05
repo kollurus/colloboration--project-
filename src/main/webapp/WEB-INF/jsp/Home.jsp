@@ -1,15 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en-US" data-ng-app="Myapp">
 <head>
 
 <%@include file="/WEB-INF/includes/Frameworks.jsp"%>
-<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/App.js"></script>
-<title>B L O G</title>
+<script
+	src="${pageContext.request.contextPath}/resources/js/AngularControllers/App.js"></script>
+<title>AppMe</title>
 </head>
-<body style="padding-top: 50px; margin-bottom:75px">
+<body style="padding-top: 50px; margin-bottom: 75px">
 	<header><%@include file="/WEB-INF/includes/Header.jsp"%></header>
-	
 	<div style="padding-top: 25px">
 		<c:choose>
 			<c:when test="${BlogClicked}">
@@ -42,50 +44,58 @@
 					</c:import>
 				</div>
 			</c:when>
-			<c:otherwise>
+		<%-- 	<c:otherwise>
 				<div class="container">
 					<c:import url="/WEB-INF/jsp/Body.jsp">
 					</c:import>
 				</div>
 			</c:otherwise>
-		</c:choose>
+ --%>		</c:choose>
+	</div>
+	<%-- <div class="container">
+		<h2>BootStrap Tabs</h2>
+		<ul class="nav nav-tabs">
+			<li><a data-toggle="tab" href="#home">Home</a></li>
+			<li><a data-toggle="tab" href="#Blog">Blog</a></li>
+			<li><a data-toggle="tab" href="#Forum">Forum</a></li>
+			<li><a data-toggle="tab" href="#Chat">Chat</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="home" class="tab-pane fade">
+				<h3>HOME</h3>
+				<p>Home Page</p>
+			</div>
+			<div id="Blog" class="tab-pane fade">
+				<h3>Blog</h3>
+				<%@include file="/WEB-INF/views/Blog.jsp"%>
+			</div>
+			<div id="Forum" class="tab-pane fade">
+				<h3>Forum</h3>
+				<%@include file="/WEB-INF/views/Forum.jsp"%>
+			</div>
+			<div id="Chat" class="tab-pane fade">
+				<h3>Chat</h3>
+				<%@include file="/WEB-INF/views/Chat.jsp"%>
+			</div>
+		</div>
 	</div>
 
-	<!--  <div id="tabs" class="container" style="margin-top: 25px">
-		<ul>
-			<li><a href="#fragment-1">Blog</a></li>
-			<li><a href="#fragment-2">Forum</a></li>
-			<li><a href="#fragment-3">Chat</a></li>
-		</ul>
-		<div id="fragment-1">
-			<%@include file="/WEB-INF/jsp/Blog.jsp"%>
-		</div>
-		<div id="fragment-2">
-			<%@include file="/WEB-INF/jsp/Forum.jsp"%>
-		</div>
-		<div id="fragment-3">
-			<%@include file="/WEB-INF/jsp/Chat.jsp"%>
-		</div>
-	</div> -->
-	
+ --%>
 
-	<footer><%@include file="/WEB-INF/includes/Foot.jsp"%></footer>
 
-	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Home.js"></script>
-
-	<script>
-		$(function() {
-			$("#tabs").tabs();
-		});
-	</script>
+	<Footer><%@include file="/WEB-INF/includes/Foot.jsp"%></Footer>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			if (window.location.href.indexOf('#myModal') != -1) {
-				$('#myModal').modal('show');
+			if (window.location.href.indexOf('#login') != -1) {
+				$('#login').modal('show');
 			}
 		});
 	</script>
+
+
+
 </body>
 </html>
+
 

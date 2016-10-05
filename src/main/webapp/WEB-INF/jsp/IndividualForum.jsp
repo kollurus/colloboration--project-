@@ -12,12 +12,12 @@
 						<input type="number" value="${forum.fid}" id="fid">
 					</p>
 				</div>
-				<div style="background-color: lightgrey">
+				<div style="background-color: lavender">
 					<p style="padding: 10px; font-size: large;">
 						<strong>${forum.forumName}</strong>
 					</p>
 				</div>
-				<div style="background-color: lightgrey">
+				<div style="background-color: lavender">
 					<p style="padding: 10px; font-size: medium">${forum.forumDesc}</p>
 				</div>
 			</c:forEach>
@@ -31,7 +31,7 @@
 					<input type=text data-ng-model="commentDesc" class="form-control" placeholder="Enter Comment">
 				</div>
 				<div class=" col-sm-1">
-					<button type="submit" data-ng-click="Comment()" class="btn btn-success" style="float: right">Comment</button>
+					<button type="submit" data-ng-click="Comment()" class="btn btn-default" style="float: right">Comment</button>
 				</div>
 			</form>
 		</div>

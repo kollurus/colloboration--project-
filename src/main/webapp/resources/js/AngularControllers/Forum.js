@@ -9,7 +9,7 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 		}
 		$http({
 			method : 'POST',
-			url : BASE_URL + '/CreateForum',
+			url : BASE_URL +'/CreateForum',
 			data : $scope.forum
 		}).success(function(data, status, headers, config) {
 			alert("Success");
@@ -32,6 +32,7 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 			alert("Error");
 		});
 	};
+	
 	$scope.getSingleForum = function() {
 		$http({
 			method : 'GET',
@@ -42,7 +43,6 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 			alert("Error");
 		});
 	};
-	
 	
 	$scope.deleteForum = function(fid) {
 		$http({
@@ -55,7 +55,7 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 		});
 	}
 	
-	
+
 	$scope.editForum = function(fid) {
 		$http({
 			method : 'GET',
@@ -69,6 +69,7 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 			alert("Error");
 		});
 	};
+	
 }]);
 
 
