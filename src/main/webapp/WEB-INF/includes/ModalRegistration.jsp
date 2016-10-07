@@ -1,32 +1,23 @@
-
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/AngularControllers/App.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/AngularControllers/Home.js"></script>
-<%-- <%@include file="/WEB-INF/includes/Frameworks.jsp" %> --%>
- <style>
- body{
-   
-    background-image: linear-gradient(#79a06d, #79a06d); 
+ <%--  <style>
+.modal-header, h4, .close {
+	background-color: #ECBC0C;
+	color: white !important;
+	text-align: center;
+	font-size: 20px;
 }
+</style>
+<div class="container">
+	<!-- Trigger the modal with a button -->
+	<!-- Modal -->
+	<div class="modal fade" id="registration" role="dialog">
+		<div class="modal-dialog">
 
-#box{
-    border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-    background: rgba(200, 200, 200, 0.1);
-    border-radius: 4px;
-    top:50px;
-}
-
-h2{
-    text-align:center;
-    color:#fff;
-}
- </style>
-  <div class="container-fluid">
-                <div class="row-fluid" >
-                <div class="modal fade" id="registration" role="dialog">
-                     <div class="col-md-offset-4 col-md-4" id="box">
-                      <h2>NEW ACCOUNT</h2>
- <div class="modal-body" style="padding: 30px 50px;">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 15px 50px;">
+					<h4> REGISTRATION </h4>
+				</div>
+				<div class="modal-body" style="padding: 30px 50px;">
 					<form role="form" data-ng-submit="submit()"
 						data-ng-controller="RegController" method="post">
 						<div class="form-group form-group-sm">
@@ -48,7 +39,7 @@ h2{
 							<br>
 							<div class="input-group">
 								<div class="input-group-addon">
-									<i class="glyphicon glyphicon-lock"></i>
+									<i class="glyphicon glyphicon-eye-open"></i>
 								</div>
 								<input type="password" class="form-control"
 									placeholder="Password" data-ng-model="password">
@@ -56,7 +47,7 @@ h2{
 							<br>
 							<div class="input-group">
 								<div class="input-group-addon">
-									<i class="glyphicon glyphicon-lock"></i>
+									<i class="glyphicon glyphicon-eye-close"></i>
 								</div>
 								<input type="password" class="form-control"
 									data-ng-model="Confirm_Password"
@@ -87,16 +78,38 @@ h2{
 								</label>
 							</div>
 						</div>
-						<!-- <p>By clicking Create an account, you agree to our Terms and
+						<p>By clicking Create an account, you agree to our Terms and
 							that you have read our Data Policy, including our Cookie Use.</p>
- -->						<br>
+						<br>
 						<button type="submit" class="btn btn-success  btn-block">
 							<span class="glyphicon glyphicon-off"></span> Register
 						</button>
 					</form>
 				</div>
+				<!-- <div class="modal-footer" style="padding-left: 50px">
+					<button type="submit" class="btn btn-danger  btn-block"
+						data-dismiss="modal">
+						<span class="glyphicon glyphicon-remove-sign "></span> Cancel
+					</button>
+					<p>
+						Not a member? <a href="#">Sign Up</a>
+					</p>
+					<p>
+						Forgot <a href="#">Password?</a>
+					</p>
+				</div> -->
 			</div>
 
 		</div>
 	</div>
 </div>
+  <script>
+	$(document).ready(function() {
+		$("#reg").click(function() {
+			$("#registration").modal();
+		});
+	});
+	
+</script> --%>
+
+

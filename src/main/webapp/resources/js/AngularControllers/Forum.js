@@ -1,4 +1,6 @@
 app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
+	var BASE_URL = 'http://localhost:8181/collo';
+	$scope.userid = document.getElementById("userid").value;
 	
 	$scope.submit = function() {
 		var BASE_URL = 'http://localhost:8181/collo';
@@ -69,6 +71,23 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 			alert("Error");
 		});
 	};
+	$scope.accessForum = function(f_userid){
+		//alert("HEllo +f_userid)
+		if($scope.userid==f_userid ){
+			
+		console.log($scope.userid);
+	     return true;
+	     console.log("true");
+	     
+		}
+		else
+		{
+			return false;
+			console.log("true");
+			
+		}
+	
+	}
 	
 }]);
 

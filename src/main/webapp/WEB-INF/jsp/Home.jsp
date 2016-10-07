@@ -1,3 +1,5 @@
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -8,7 +10,7 @@
 <%@include file="/WEB-INF/includes/Frameworks.jsp"%>
 <script
 	src="${pageContext.request.contextPath}/resources/js/AngularControllers/App.js"></script>
-<title>AppMe</title>
+<title>B L O G</title>
 </head>
 <body style="padding-top: 50px; margin-bottom: 75px">
 	<header><%@include file="/WEB-INF/includes/Header.jsp"%></header>
@@ -85,13 +87,13 @@
 
 	<Footer><%@include file="/WEB-INF/includes/Foot.jsp"%></Footer>
 
-	<script type="text/javascript">
+	 <!--  <script type="text/javascript">
 		$(document).ready(function() {
 			if (window.location.href.indexOf('#login') != -1) {
 				$('#login').modal('show');
 			}
 		});
-	</script>
+	</script> -->
 
 
 

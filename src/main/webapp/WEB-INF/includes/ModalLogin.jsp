@@ -1,29 +1,25 @@
- <style>
- body{
-   
-    background-image: linear-gradient(#79a06d, #79a06d); 
-}
 
-#box{
-    border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-    background: rgba(200, 200, 200, 0.1);
-    border-radius: 4px;
-    top:50px;
-}
+  <style>
+  .modal-header, h4, .close {
+      background-color: #ECBC0C;
+      color:white !important;
+      text-align: center;
+      font-size: 20px;
+  }
+  </style>
+<div class="container"  >
+	<!-- Trigger the modal with a button -->
+	<!-- Modal -->
+	 <div class="modal fade" id="login" role="dialog">
+		<div class="modal-dialog modal-sm">
 
-h2{
-    text-align:center;
-    color:#fff;
-}
- </style>
-  <div class="container-fluid">
-                <div class="row-fluid" >
-                <div class="modal fade" id="login" role="dialog">
-                     <div class="col-md-offset-4 col-md-4" id="box">
-                      <h2>Login</h2>
-                   <div class="modal-body" style="padding: 35px 35px;">
-					<form action="perform_login" method="post">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 10px 25px;">
+					<h4> GET LOGGED IN.. </h4>
+				</div>
+				<div class="modal-body" style="padding: 35px 35px;">
+					<form action="${pageContext.request.contextPath}/perform_login" method="post">
 						<div class="form-group form-group-sm">
 
 							<div class="input-group">
@@ -36,7 +32,7 @@ h2{
 							<br>
 							<div class="input-group">
 								<div class="input-group-addon">
-									<i class="glyphicon glyphicon-lock"></i>
+									<i class="glyphicon glyphicon-eye-open"></i>
 								</div>
 								<input type="password" class="form-control"
 									placeholder="Enter Password" id="password" name="password" >
@@ -50,11 +46,12 @@ h2{
 				</div>
 			</div>
 		</div>
-	</div></div></div></div>
-<!--  <script>
+	</div>
+</div>
+<%-- <script>
 	$(document).ready(function() {
 		$("#log").click(function() {
 			$("#login").modal();
 			});
 		});
-</script> -->
+</script> --%> 

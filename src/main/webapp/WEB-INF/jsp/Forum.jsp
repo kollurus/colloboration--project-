@@ -22,7 +22,7 @@
 					class="form-control " rows="13" data-ng-model="forumDesc"></textarea>
 			</div>
 			<div align="right">
-				<button type="submit" class="btn btn-info">Save Forum</button>
+				<button type="submit" class="btn btn-success">Save Forum</button>
 			</div>
 		</form>
 	</sec:authorize>
@@ -43,21 +43,28 @@
 					<td width="15%">
 						<div class="btn-group  btn-group-justified ">
 							<sec:authorize access="isAuthenticated()">
-								<a class="btn btn-danger btn-xs"
-									data-ng-click="deleteForum(forum.fid)">Delete</a>
-
-								<a class="btn btn-primary btn-xs"
-									data-ng-click="editForum(forum.fid)">Edit</a>
+								<div data-ng-if="accessForum(forum.f_userid)">
+								       <a class="btn btn-primary btn-xs"
+										data-ng-click="deleteForum(forum.fid)">Delete</a> <a
+										class="btn btn-primary btn-xs"
+										data-ng-click="editForum(forum.fid)">Edit</a>
+								</div>
 							</sec:authorize>
-							<a href="forum/{{forum.fid}}" class="btn btn-default btn-xs">View</a>
 						</div>
-					</td>
+				    </td>
+					<td width="5%"><a href="forum/{{forum.fid}}"
+						class="btn btn-primary btn-xs">View</a></td>
 				</tr>
 			</tbody>
 		</table>
-	</div>
 
+		<input type="text" value="${sessionScope.userid }" id="userid"
+			hidden="true" />
+	</div>
 	<script
 		src="${pageContext.request.contextPath}/resources/js/AngularControllers/Forum.js"></script>
+		<input type="text" value="${sessionScope.userid }"  style = "margin-top: 75px" id="userid"
+			hidden="true" />
+			<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Forum.js"></script>
 </div>
 
