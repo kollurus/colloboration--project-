@@ -7,7 +7,11 @@
 <head>
 <style>
 body{
-    background: #8999A8;
+     
+    background-image: url("https://wayfaringrosie.files.wordpress.com/2015/02/img_7774-0.jpg?w=662");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 <%-- .navbar, .dropdown-menu{
 background:rgba(255,255,255,0.25);
@@ -15,7 +19,7 @@ border: none;
 
 .navbar-toggle .icon-bar{
     color: #fff;
-    background: #fff; 
+    background: #fff; background: #8999A8;
 } --%> 
 </style>
 </head>
