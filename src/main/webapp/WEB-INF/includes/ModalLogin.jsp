@@ -16,7 +16,7 @@
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header" style="padding: 10px 25px;">
-					<h4> GET LOGGED IN.. </h4>
+					<h4 style="color: white ;font-family:cursive"> GET LOGGED IN.. </h4>
 				</div>
 				<div class="modal-body" style="padding: 35px 35px;">
 					<form action="${pageContext.request.contextPath}/perform_login" method="post">

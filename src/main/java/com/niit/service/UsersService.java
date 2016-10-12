@@ -12,4 +12,7 @@ public interface UsersService {
 	
 	/*Used to save userid and name in session on Successfull Login*/
 	public void LoginSuccess(HttpSession session);
+	
+	public User viewUser(HttpSession session);
 }
+

@@ -15,7 +15,7 @@
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header" style="padding: 15px 50px;">
-					<h4> REGISTRATION </h4>
+					<h4 style="color: white ;font-family:cursive"> REGISTRATION </h4>
 				</div>
 				<div class="modal-body" style="padding: 30px 50px;">
 					<form role="form" data-ng-submit="submit()"

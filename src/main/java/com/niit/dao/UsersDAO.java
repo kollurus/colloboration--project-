@@ -12,4 +12,5 @@ public interface UsersDAO {
 	
 	/*Used to retrieve single user based on username*/
 	public User getUser(String username);
+	public User viewUser(int blogid);
 }

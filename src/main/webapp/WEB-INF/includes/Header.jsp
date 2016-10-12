@@ -36,7 +36,7 @@ border: none;
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">N O M A D I C</a>
+					<a class="navbar-brand" href="#" style="color: white ;font-family:cursive">N O M A D I C</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->

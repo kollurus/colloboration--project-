@@ -20,7 +20,26 @@ public class User {
 	private String email;
 	private String mobile;
 	private String Enabled;
-	private String role_name;
+	private String role;
+	private byte[] image;
+	public String getRole() {
+		return role;
+	}
+    public void setRole(String role) {
+		this.role = role;
+	}
+	public byte[] getImage() {
+		return image;
+	}
+	//public String getRole_user() {
+	//	return role_user;
+	//}
+	//public void setRole_user(String role_user) {
+	//	this.role_user = role_user;
+	//}
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
 	public int getUserid() {
 		return userid;
 	}
@@ -64,12 +83,6 @@ public class User {
 		Enabled = enabled;
 	}
 	
-	public String getRole_name() {
-		return role_name;
-	}
-	public void setRole_name(String role_name) {
-		this.role_name = role_name;
-	}
 	public String getMobile() {
 		return mobile;
 	}

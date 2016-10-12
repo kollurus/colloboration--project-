@@ -12,6 +12,9 @@ import com.niit.service.BlogService;
 import com.niit.service.ForumService;
 import com.niit.service.UsersService;
 
+
+
+
 @Controller
 public class Navigation {
 	
@@ -22,6 +25,9 @@ public class Navigation {
 	
 	@Autowired
 	private BlogService blogService;
+	
+	//@Autowired
+	//private BlogRatingService blogRatingService;
 	
 	@RequestMapping(value={"/","/Home"})
 	public String Homepage()

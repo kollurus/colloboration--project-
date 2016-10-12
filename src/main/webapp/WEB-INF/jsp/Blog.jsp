@@ -5,7 +5,7 @@
 	<sec:authorize access="isAuthenticated()">
 		<form role="form" data-ng-submit="submit()"
 			data-ng-controller="BlogController">
-			<h3 align="center">Create Blog</h3>
+			<h3 style="color: #000000;font-family:Georgia" align="center"">CREATE BLOG</h3>
 			<div class="form-group">
 				<input type="text" class="form-control input-sm"
 					placeholder="Blog Id" data-ng-model="blogid" data-ng-show="blogid"
